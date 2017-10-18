@@ -1,6 +1,6 @@
 {
   "name": "tc-boilerplate-pc",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "tc boilerplate for pc used egg",
   "main": "index.js",
   "scripts": {
