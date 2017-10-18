@@ -1,0 +1,19 @@
+{
+  "name": "tc-boilerplate-pc",
+  "version": "0.1.0",
+  "description": "tc boilerplate for pc used egg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tftc/tc-boilerplate-pc.git"
+  },
+  "author": "tc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tftc/tc-boilerplate-pc/issues"
+  },
+  "homepage": "https://github.com/tftc/tc-boilerplate-pc#readme"
+}
