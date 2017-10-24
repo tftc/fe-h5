@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%=title%></title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" type="text/css" href="/dist/<%=name%>/<%=version%>/base/index.css">
+  <link rel="stylesheet" type="text/css" href="/dist/<%=name%>/<%=version%>/<%=page%>/index.css">
+  <script type="text/javascript" src="/dist/<%=name%>/<%=version%>/base.dll.js"></script>
+  <script type="text/javascript" src="/dist/<%=name%>/<%=version%>/base/index.js"></script>
+</head>
+<body>
+<div class="dialog" id="dialog">
+  <dl class="box">
+    <dt>
+      <label class="vali-code" title="请输入验证码">
+        <input type="hidden" name="token" id="token" />
+        <input type="text" name="captcha" id="captcha" maxlength="5" />
+        <a href="#" id="valiGetter"><img src="" /></a>
+      </label>
+    </dt>
+    <dd class="btns">
+      <button id="cfmCancel" title="取消"></button>
+      <button id="cfmSure" title="确定"></button>
+    </dd>
+  </dl>
+</div>
+<div class="tips" id="tips"></div>
+<header>
+  <a href="carloan://goHome" class="go-back"></a>
+  <!--<a href="javascript: void(0);" class="register">去注册</a>-->
+  <h1><%=title%></h1>
+</header>
+<section>
+  <form>
+    <input type="hidden" name="cpsType" value="P0018">
+    <input type="hidden" name="source" value="WEB_APP" />
+    <input type="hidden" name="_csrf" value="<%= ctx.csrf %>">
+    <label class="mobile">
+      <input type="number" id="mobile" name="mobile" placeholder="手机号" maxlength="11" data-checked="false" />
+    </label>
+    <label class="sms-code">
+      <input type="number" id="smsCode" name="sms" placeholder="验证码" maxlength="6" />
+      <button id="smsGetter" data-get="获取验证码" data-resend="重新发送"></button>
+    </label>
+    <span class="argeements">
+          <a href="/legal/regAndService">《用户注册与服务协议》</a>
+          <a href="/legal/oAuth">《个人信息查询授权书》</a>
+        </span>
+    <button id="login">确 定</button>
+  </form>
+</section>
+<script type="text/javascript" src="/dist/<%=name%>/<%=version%>/<%=page%>/index.js"></script>
+</body>
+</html>

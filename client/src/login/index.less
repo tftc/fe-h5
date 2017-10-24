@@ -1,0 +1,183 @@
+@import "../base/mixin.less";
+@import "../base/theme.less";
+
+body {
+  header {
+    position: relative;
+    width: 100%;
+    .px2rem(height, 140 * 2);
+    background: #df3535;
+    overflow: hidden;
+    &:before, &:after {
+      content: '';
+      .abs();
+      z-index: 1;
+      width: 160%;
+      height: 150%;
+      border-radius: 50%;
+      background: @theme_color;
+    }
+    &:before {
+      left: -86%;
+      top: -116%;
+    }
+    &:after {
+      left: -90%;
+      top: auto;
+      bottom: -130%;
+    }
+    a {
+      .abs();
+      z-index: 2;
+      color: white;
+      &.go-back {
+        .px2rem(margin-top, 11 * 2);
+        .px2rem(margin-left, 18.3 * 2);
+        .px2rem(width, 24 * 2);
+        .px2rem(height, 24 * 2);
+        background: url(../img/nav/icon-back@2x.png) no-repeat center center;
+        background-size: contain;
+      }
+      &.register {
+        .px2rem(top, 11 * 2);
+        left: auto;
+        .px2rem(right, 21 * 2);
+        .px2rem(height, 21 * 2);
+        .px2rem(line-height, 21 * 2);
+        .px2px(font-size, 15 * 2);
+      }
+    }
+    h1 {
+      .abs();
+      top: auto;
+      .px2rem(left, 21 * 2);
+      .px2rem(bottom, 23 * 2);
+      z-index: 3;
+      margin: 0;
+      padding: 0;
+      color: white;
+      .px2px(font-size, 24 * 2);
+      font-weight: normal;
+    }
+  }
+  section {
+    .px2rem(margin-top, 24 * 2);
+    .px2rem(padding-left, 28 * 2);
+    .px2rem(padding-right, 28 * 2);
+    width: 100%;
+    form {
+      label {
+        position: relative;
+        display: block;
+        margin-top: -1px;
+        padding: 0;
+        .px2rem(padding-left, 46 * 2);
+        width: 100%;
+        .px2rem(height, 48 * 2);
+        border: 1px solid @bd_color;
+        &:first-of-type {
+          margin-top: 1px;
+          .px2rem(border-top-left-radius, 4 * 2);
+          .px2rem(border-top-right-radius, 4 * 2);
+        }
+        &:last-of-type {
+          .px2rem(border-bottom-left-radius, 4 * 2);
+          .px2rem(border-bottom-right-radius, 4 * 2);
+        }
+        &.focus {
+          z-index: 999;
+          .px2rem(border-radius, 4 * 2);
+          border-color: @theme_color;
+        }
+        &:before {
+          content: '';
+          float: left;
+          .px2rem(margin-top, 14 * 2);
+          .px2rem(margin-left, -26 * 2);
+          .px2rem(width, 20 * 2);
+          .px2rem(height, 20 * 2);
+        }
+        &.mobile {
+          &:before {
+            background: url(../img/login/phone@2x.png) no-repeat left center;
+            background-size: contain;
+          }
+        }
+        &.sms-code {
+          &:before {
+            background: url(../img/login/identify@2x.png) no-repeat left center;
+            background-size: contain;
+          }
+          input { width: 50%; }
+          button {
+            .abs();
+            left: auto;
+            .px2rem(top, 14 * 2);
+            .px2rem(right, 21 * 2);
+            z-index: 2;
+            margin: 0; padding: 0;
+            //.px2rem(width, 80 * 2);
+            text-align: center;
+            .px2px(font-size, 14 * 2);
+            color: rbga(0, 0, 0, .87);
+            .px2px(letter-spacing, .34 * 2);
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            display: none;
+            &:before {
+              content: attr(data-get);
+            }
+            &:disabled {
+              cursor: default;
+              color: black;
+            }
+            &.focus {
+              color: @theme_color;
+            }
+          }
+        }
+        input {
+          width: 100%;
+          height: 100%;
+          .px2px(font-size, 14 * 2);
+          border: 0;
+          background: transparent;
+        }
+      }
+      .argeements {
+        float: left;
+        width: 100%;
+        .px2rem(padding-top, 24 * 2);
+        .px2rem(padding-bottom, 24 * 2);
+        .px2rem(line-height, 20 * 2);
+        text-align: center;
+        .px2px(font-size, 12 * 2);
+        &:after {
+          content: '确定即表示同意以上协议';
+          display: block;
+          width: 100%;
+          color: #ccc;
+        }
+      }
+      & > button {
+        display: block;
+        .px2rem(margin-top, 31 * 2);
+        width: 100%;
+        .px2rem(height, 36 * 2);
+        .px2px(font-size, 15 * 2);
+        .px2px(letter-spacing, .26 * 2);
+        color: white;
+        border: 0;
+        font-family: @ft_pfm;
+        .px2rem(border-radius, 4 * 2);
+        background: @theme_color;
+      }
+    }
+  }
+  .dialog {
+    dl.box {
+      .px2rem(margin-top, 134 * 2);
+    }
+  }
+}

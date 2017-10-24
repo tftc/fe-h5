@@ -1,0 +1,67 @@
+@import "../base/mixin.less";
+@import "../base/theme.less";
+
+.result {
+  .result-bg {
+    display: block;
+    position: relative;
+    .px2rem(width, 190);
+    .px2rem(height, 176);
+    background: url(../img/bind-agreement/succeed@2x.png) no-repeat center center;
+    background-size: contain;
+    text-align: center;
+    margin: 0 auto;
+    .px2rem(margin-top, 38 * 2);
+  }
+  .content {
+    .px2rem(margin-top, 104 * 2);
+  }
+  .succeed {
+    .result-text {
+      .px2rem(width, 138 * 2);
+      text-align: center;
+    }
+    .result-bg {
+      background: url(../img/bind-agreement/succeed@2x.png) no-repeat center center;
+      background-size: contain;
+    }
+  }
+  .result-text {
+    .px2rem(font-size, 15 * 2);
+    color: rgba(0, 0, 0, .87);
+    .px2rem(width, 275 * 2);
+    margin: 0 auto;
+    .px2rem(margin-bottom, 22 * 2);
+  }
+  .btn-link {
+    background-color: @topbar_color;
+    .px2rem(width, 240 * 2);
+    .px2rem(height, 36 * 2);
+    .px2rem(line-height, 36 * 2);
+    .px2rem(font-size, 14 * 2);
+    .px2rem(border-radius, 4 * 2);
+    color: #fff;
+    margin: 0 auto;
+    .px2rem(margin-top, 48 * 2);
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+    }
+  }
+  footer {
+    .px2rem(font-size, 12 * 2);
+    font-size: 0.32rem;
+    color: #000;
+    position: absolute;
+    .px2rem(bottom, 20 * 2);
+    text-align: center;
+    left: 0;
+    right: 0;
+    .tel {
+      color: blue;
+    }
+  }
+}

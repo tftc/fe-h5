@@ -1,0 +1,53 @@
+@import "../base/mixin.less";
+@import "../base/theme.less";
+
+.result {
+  .content {
+    .px2rem(margin-top, 44 * 2);
+    .notice-item {
+      border-bottom: 1px solid #F4F4F4;
+      .px2rem(padding-left, 10 * 2);
+      .px2rem(padding-top, 16 * 2);
+      .px2rem(padding-bottom, 14 * 2);
+    }
+    .notice-item-top {
+      line-height: 2;
+      overflow: hidden;
+    }
+    .notice-item-title {
+      .px2rem(font-size, 14 * 2);
+      color: rgba(0, 0, 0, .87);
+    }
+    .notice-item-content {
+      .px2rem(font-size, 12 * 2);
+      .px2rem(line-height, 20 * 2);
+      color: #5F5F5F;
+    }
+    .notice-item-time {
+      float: right;
+      .px2rem(padding-right, 16 * 2);
+      .px2rem(font-size, 12 * 2);
+      .px2rem(line-height, 18 * 2);
+      color: rgba(0, 0, 0, .54);
+    }
+  }
+  .empty {
+    .result-bg {
+      display: block;
+      position: relative;
+      .px2rem(width, 166);
+      .px2rem(height, 180);
+      background: url(../img/notice/empty@2x.png) no-repeat center center;
+      background-size: contain;
+      text-align: center;
+      margin: 0 auto;
+      .px2rem(margin-top, 50 * 2);
+    }
+    .result-text {
+      .px2rem(margin-top, 40 * 2);
+      .px2rem(font-size, 15 * 2);
+      text-align: center;
+      color: rgba(0, 0, 0, .54);
+    }
+  }
+}
