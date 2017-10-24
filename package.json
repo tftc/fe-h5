@@ -1,10 +1,9 @@
 {
-  "name": "carloan",
-  "version": "1.1.0",
+  "name": "fe-pc",
+  "version": "0.1.0",
   "description": "",
   "private": true,
   "dependencies": {
-    "clipboard": "^1.7.1",
     "egg": "^1.9.0",
     "egg-scripts": "^2.1.0",
     "egg-view-ejs": "^1.1.0",
@@ -53,7 +52,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "prestart": "gulp compile",
+    "prestart": "gulp build",
     "start": "egg-scripts start --daemon",
     "stop": "egg-scripts stop",
     "dev": "cross-env NODE_ENV=dev concurrently \"egg-bin dev --inspect\" \"gulp dev\"",

@@ -2,10 +2,17 @@
 
 ## 快速开始
 
+### 准备工作
+
+```bash
+$ npm install -g yarn --registry=https://registry.npm.taobao.org
+$ yarn config set registry https://registry.npm.taobao.org
+```
+
 ### 开发
 
 ```bash
-$ npm i
+$ yarn install
 $ npm run dev
 ```
 
