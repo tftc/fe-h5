@@ -24,6 +24,7 @@
     "clean-webpack-plugin": "^0.1.17",
     "concurrently": "^3.5.0",
     "config": "^1.27.0",
+    "cross-env": "^5.1.0",
     "css-loader": "^0.28.7",
     "egg-bin": "^4.3.0",
     "egg-ci": "^1.8.0",
@@ -52,9 +53,10 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "prestart": "gulp compile",
     "start": "egg-scripts start --daemon",
     "stop": "egg-scripts stop",
-    "dev": "concurrently \"egg-bin dev --inspect\" \"gulp dev\"",
+    "dev": "cross-env NODE_ENV=dev concurrently \"egg-bin dev --inspect\" \"gulp dev\"",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

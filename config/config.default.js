@@ -22,7 +22,27 @@ module.exports = appInfo => {
   // token过期时间，单位s
   config.expire = 7 * 24 * 60 * 60;
 
+  // 后端服务地址
+  config.nakedBackendPrefix = {
+    p2p: 'xxx',
+    p2pBack: 'xxx',
+    car: 'xxx',
+    passport: 'xxx',
+  };
+
+  // 阿里云相关服务配置
+  config.aliyun = {
+    // 实名认证服务
+    authentication: {
+      api: 'xxx',
+      AppKey: 'xxx',
+      AppSecret: 'xxx',
+      AppCode: 'xxx',
+    },
+  };
+
   // 静态资源配置
+  // todo:需在config.local.js覆盖掉，webpack中会使用到相关配置
   config.static = {
     prefix: '/dist',
     dir: path.join(appInfo.baseDir, 'client/dist'),
