@@ -2,7 +2,6 @@
   "name": "fe-h5",
   "version": "0.1.0",
   "description": "基于Egg + webpack + gulp + zepto + commonjs等技术栈的一套适用于webapp、hybrid等业务的前端解决方案",
-  "private": true,
   "dependencies": {
     "egg": "^1.9.0",
     "egg-scripts": "^2.1.0",
