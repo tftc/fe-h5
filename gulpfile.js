@@ -100,7 +100,7 @@ gulp.task('browser-sync', () => {
 });
 
 // 静态资源编译
-gulp.task('build', gulpSequence('pre-task', 'compile'));
+gulp.task('build', gulpSequence('pre-task', 'compile', 'build-multiple-view'));
 
 // 运行Gulp时，默认的Task
 gulp.task('dev', gulpSequence('build', 'browser-sync'));
